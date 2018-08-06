@@ -50,11 +50,16 @@ end
 # def find_pet_by_name(shop , name)
 #   shop[:pets].select {|pet| pet[:name] == name}[0]
 # end
-
+#
 def remove_pet_by_name(shop, name)
   pet = find_pet_by_name(shop, name)
-  shop[:pets].delete(pet) if pet != nil
+  shop[:pets].delete(pet)
 end
+
+# OR
+# def remove_pet_by_name(shop, name)
+#   shop[:pets].delete(find_pet_by_name(shop, name))
+# end
 
 #OR
 # def remove_pet_by_name(shop, name)
